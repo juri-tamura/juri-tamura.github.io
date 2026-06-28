@@ -44,7 +44,7 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      padding: 10px 5%;
+      padding: 10px 3%;
       gap: 8px;
     }
 
@@ -76,7 +76,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 5%;
+      padding: 18px 3%;
       border-bottom: 1px solid rgba(184,150,62,0.2);
     }
 
@@ -113,7 +113,7 @@
       background: var(--navy);
       display: flex;
       align-items: center;
-      padding: 120px 5% 80px;
+      padding: 120px 3% 80px;
       position: relative;
       overflow: hidden;
     }
@@ -273,7 +273,7 @@
     }
 
     /* ── Sections ── */
-    section { padding: 90px 5%; }
+    section { padding: 80px 3%; }
 
     .section-inner {
       width: 100%;
@@ -372,9 +372,10 @@
     .lessons-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
+      gap: 3px;
       background: #E8ECF0;
       margin-bottom: 48px;
+      width: 100%;
     }
 
     .lesson-card {
@@ -402,8 +403,9 @@
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
+      gap: 3px;
       background: rgba(184,150,62,0.15);
+      width: 100%;
     }
 
     .price-card {
@@ -642,20 +644,16 @@
     }
 
     /* ── Responsive (tablet & mobile only) ── */
-    @media (max-width: 1024px) {
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .book-inner { grid-template-columns: 1fr; gap: 40px; }
-      .lessons-grid { grid-template-columns: 1fr 1fr; }
-      .pricing-grid { grid-template-columns: 1fr 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr 1fr; }
-    }
+    /* No tablet intermediate breakpoint — desktop grid starts at 769px */
 
-    @media (max-width: 768px) {
+    @media (max-width: 640px) {
       nav { padding: 14px 4%; }
       .lang-bar { padding: 8px 4%; }
       .hero { padding: 110px 4% 60px; }
       section { padding: 64px 4%; }
       .hero-photo-wrap { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .book-inner { grid-template-columns: 1fr; gap: 32px; }
       .lessons-grid { grid-template-columns: 1fr; }
       .pricing-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
