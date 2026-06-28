@@ -5,8 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Juri Tamura – Private Japanese Tutor</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    /* ── NUCLEAR FULL-WIDTH RESET ── */
+    html {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    html, body {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow-x: hidden;
+    }
+    body > * {
+      width: 100%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
 
     :root {
       --navy:     #0D1B2A;
@@ -20,6 +42,13 @@
       --TNR:      'Times New Roman', Times, serif;
     }
 
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: var(--TNR);
       color: var(--text);
@@ -32,6 +61,7 @@
     /* ── Language bar ── */
     .lang-bar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      width: 100%;
       background: var(--navy);
       display: flex; justify-content: flex-end; align-items: center;
       padding: 9px 48px; gap: 8px;
@@ -50,6 +80,7 @@
     /* ── Nav ── */
     nav {
       position: fixed; top: 36px; left: 0; right: 0; z-index: 99;
+      width: 100%;
       background: rgba(13,27,42,0.96);
       backdrop-filter: blur(8px);
       display: flex; justify-content: space-between; align-items: center;
@@ -66,9 +97,13 @@
     .hero {
       position: relative; overflow: hidden;
       min-height: 100vh;
+      width: 100vw;
+      max-width: 100%;
       background: var(--navy);
       display: flex; align-items: center;
       padding: 130px 48px 80px;
+      margin: 0;
+      left: 0;
     }
     .hero-photo {
       position: absolute; top: 0; right: 0;
@@ -129,7 +164,7 @@
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 
     /* ── Sections ── */
-    section { width: 100%; padding: 88px 48px; }
+    section { width: 100vw; max-width: 100%; padding: 88px 48px; margin: 0; display: block; left: 0; }
     .sec-label { font-family: var(--TNR); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
     .sec-title { font-family: var(--TNR); font-size: clamp(30px, 2.8vw, 46px); font-weight: 300; line-height: 1.2; color: var(--navy); margin-bottom: 48px; }
 
